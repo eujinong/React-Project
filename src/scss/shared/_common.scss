@@ -1,0 +1,24 @@
+* {
+  font-variant-ligatures: none;
+}
+
+strong {
+  font-weight: $font-weight-medium;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  color: $secondary;
+}
+
+// svg {
+//   // Workaround for the SVG overflow bug in IE10/11 is still required.
+//   // See https://github.com/twbs/bootstrap/issues/26878
+//   overflow: hidden;
+//   vertical-align: inherit;
+// }

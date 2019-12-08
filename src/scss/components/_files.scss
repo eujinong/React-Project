@@ -1,0 +1,78 @@
+.file-item {
+  padding: 16px 0;
+  font-weight: $font-weight-medium;
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-200;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .left {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+  }
+  .title {
+    font-size: 16px;
+    font-weight:  $font-weight-bold;
+    letter-spacing: -0.32px;
+  }
+  .author {
+    font-size: 13px;
+  }
+  .when {
+    margin-left: 8px;
+    border-left: 1px solid $slate;
+    padding-left: 8px;
+    font-size: 13px;
+    line-height: 23px;
+  }
+  .input-container {
+    flex: 1;
+    margin-left: 16px;
+    padding-right: 100px;
+  }
+  .links {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    color: $secondary;
+    font-size: 15px;
+    .link-item {
+      cursor: pointer;
+      &:not(:last-of-type) {
+        margin-right: 12px;
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .form-group-url {
+    position: relative;
+    .icon {
+      position: absolute;
+      left: 6px;
+      top: 8px;
+    }
+    input {
+      padding-left: 32px;
+    }
+  }
+}
+
+.files {
+  &.files--side {
+    .file-item {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $gray-200;
+      }
+    }
+  }
+}

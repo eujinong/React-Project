@@ -1,0 +1,329 @@
+.board {
+  font-weight: $font-weight-medium;
+  background-color: $silver;
+  &.active {
+    background-color: $gray-500;
+  }
+  padding: 8px 8px 1px 8px;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  padding: 6px 2px 12px 6px;
+  justify-content: space-between;
+  .caption {
+    background-color: $slate;
+    border-radius: 40px;
+    color: $white;
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+    padding: 8px 12px;
+    text-transform: uppercase;
+  }
+  .action {
+    padding: 0 10px;
+    transition: transform .2s ease;
+    &.opened {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.board-item {
+  background-color: $white;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 12px 12px 10px 15px;
+  border: 1px solid $gray-300;
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .subtitle {
+    .order-number {
+      color: $yale;
+    }
+    font-size: 11px;
+  }
+  .topic {
+    .order-number {
+      color: $yale;
+    }
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+  }
+  .title {
+    margin-top: 5px;
+    color: $dark;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+  }
+  .bottom {
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .meta-item {
+    display: flex;
+    align-items: center;
+    .task-progress {
+      display: flex;
+      div {
+        width: 15px;
+        height: 10px;
+        background-color: $gray-300;
+        margin-right: 3px;
+        &:first-child {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        &:last-child {
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        &.in-progress {
+          background-color: $warning;
+        }
+        &.pending-verification {
+          background-color: $warning;
+        }
+        &.verified {
+          background-color: $success;
+        }
+      }
+    }
+  }
+  .meta-left, .media-right {
+    display: flex;
+    align-items: center;
+  }
+  .meta-item:not(:last-child) {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .badge {
+    display: inline-block;
+  }
+}
+
+.board-item-horizontal {
+  background-color: $white;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 12px 12px 10px 15px;
+  border: 1px solid $gray-300;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .left {
+    display: flex;
+    justify-content: space-between;
+  }
+  .subtitle {
+    .order-number {
+      color: $yale;
+    }
+    font-size: 11px;
+  }
+  .title {
+    color: $dark;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+  }
+  .right {
+    display: flex;
+    @include media-breakpoint-down('sm') {
+      width: 100%;
+    }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+  .meta-item {
+    display: flex;
+    align-items: center;
+  }
+  .meta-left, .media-right {
+    display: flex;
+    align-items: center;
+  }
+  .meta-item:not(:last-child) {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .badge {
+    display: inline-block;
+  }
+}
+
+.board-panel {
+  font-weight: $font-weight-medium;
+  .card-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $white;
+    border-bottom: 0;
+  }
+  .card-body {
+    padding-top: 0;
+  }
+  .panel-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .panel-title {
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+  }
+  .panel-action {
+    display: flex;
+    .action-item {
+      &:not(:last-of-type) {
+        margin-right: 8px;
+      }
+      .arrow {
+        transition: transform .2s ease;
+        &.opened {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .tasks-progress {
+    margin-top: 20px;
+  }
+}
+
+.tasks-progress {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .progress-item {
+    height: 6px;
+    width: 60px;
+    border-radius: 2px;
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
+  }
+  .progress-label {
+    margin-left: 5px;
+  }
+}
+
+.board-task-item {
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px 8px;
+  font-weight: $font-weight-medium;
+  border-top: 1px solid $border-color;
+  position: relative;
+  &.bg-unclickable {
+    .background-unclickable {
+      display: inline;
+    }
+  }
+  .background-unclickable {
+    display: none;
+    cursor: auto;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: transparent;
+    z-index: 2;
+  }
+  &:last-of-type {
+    border-bottom: 1px solid $border-color;
+  }
+  .board-task-item-left, .board-task-item-right {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+  .custom-control-label {
+    font-size: 16px;
+    color: $body-color;
+    &::before, &::after {
+      top: 0;
+      left: -32px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .board-task-item-right {
+    @include media-breakpoint-down('xs') {
+      flex-direction: column;
+    }
+  }
+
+  .board-task-users {
+    display: flex;
+    flex-wrap: wrap;
+    &>div {
+      width: 144px;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    .react-select-user__menu {
+      right: 0;
+    }
+  }
+}
+
+.bg-ivory {
+  .avatar {
+    border-color: $ivory;
+  }
+}
+
+.bg-honeydew {
+  .board-task-item-left {
+    color: $gray-500;
+  }
+  .avatar {
+    border-color: $honeydew;
+  }
+}
+
+.assigned-users {
+  .assigned-filter {
+    //position: absolute;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 10000;
+    padding: 10px 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    &.menu-is-open {
+      opacity: 1;
+    }
+    button {
+        font-size: 11px !important;
+    }
+  }
+  .react-select-user__menu {
+    padding-top: 30px;
+  }
+}

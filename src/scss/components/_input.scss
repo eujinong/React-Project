@@ -1,0 +1,33 @@
+.form-control {
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+}
+
+.url-input-group {
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 6px;
+    top: 7px;   
+  }
+  &.failed, &.completed, &.attaching {
+    .icon {
+      display: block;
+    }
+    .form-control {
+      padding-left: 32px;
+    }
+  }
+
+  &.completed {
+    
+    .form-control {
+      &:not(:focus) {
+        margin-top: -5px;
+        margin-bottom: -10px;
+        background: transparent;
+        border: 0;
+      }
+    }
+  }
+}

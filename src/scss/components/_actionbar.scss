@@ -1,0 +1,94 @@
+.actionbar {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  position: relative;
+  &.actionbar-border {
+      border-bottom: 1px solid $silver;
+      width: auto;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .loading-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  @include media-breakpoint-up('xl') {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-down('lg') {
+    flex-direction: column;
+  }
+
+  .actionbar-item {
+    button.btn-link {
+        font-size: 11px;
+    }
+    @include media-breakpoint-down('lg') {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .actionbar-form {
+    margin-left: -4px;
+    margin-right: -4px;
+    display: flex;
+    @include media-breakpoint-down('sm') {
+      flex-direction: column;
+    }
+    > * {
+      padding-left: 4px;
+      padding-right: 4px;
+      @include media-breakpoint-down('sm') {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .actionbar-form-item {
+      @include media-breakpoint-up('xl') {
+        min-width: 200px;
+      }
+      @include media-breakpoint-down('lg') {
+        flex: 1
+      }
+      .check-button {
+        button {
+          height: 38px;
+        }
+      }
+    }
+  }
+  &.assignees-action {
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding: 20px 1px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+      width: 120%;
+      border-bottom: 1px solid $gray-500;
+    }
+    .actionbar-item {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-down('lg') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include media-breakpoint-down('sm') {
+      flex-wrap: wrap;
+    }
+  }
+}

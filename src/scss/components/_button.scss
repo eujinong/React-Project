@@ -1,0 +1,41 @@
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn-silver {
+  border: 1px solid #D0D3DB;
+  box-shadow: 0 1px 1px 0 rgba(#070A43, 0.26);
+}
+
+.btn-link {
+  text-decoration: underline;
+  font-weight: $font-weight-normal;
+  color: $primary;
+  padding: 4px 5px;
+}
+
+.btn {
+  .custom-control-label {
+    line-height: 24px;
+    cursor: pointer;
+    &::before {
+      background-color: $white;
+    }
+    color: currentColor;
+  }
+  .custom-control-input {
+    &:checked {
+      ~ .custom-control-label {
+        &::before {
+          background-color: $white;
+        }
+      }
+    }
+    &:disabled {
+      ~ .custom-control-label {
+        color: currentColor;
+      }
+    }
+  }
+}

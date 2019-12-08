@@ -1,0 +1,12 @@
+.nav-tabs {
+  .nav-item {
+    margin-bottom: -3px;
+    .nav-link {
+      &.active {
+        border-width: 0px;
+        border-bottom-width: 3px;
+      }
+      font-weight: $font-weight-medium;
+    }
+  }
+}

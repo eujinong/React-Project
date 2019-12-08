@@ -1,0 +1,60 @@
+.avatar-group {
+  display: flex;
+  flex-direction: row-reverse;
+  .avatar {
+    margin-left: -5px;
+  }
+  .avatar-secondary {
+    background-color: $secondary;
+    .avatar-text {
+      color: $gray-200;
+    }
+    &:hover {
+      .avatar-name {
+        display: none;
+      }
+    }
+  }
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $gray-200;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  border: 2px solid $white;
+  position: relative;
+  .avatar-name {
+    position: absolute;
+    left: 1%;
+    font-size: 14px;
+    bottom: -35px;
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $secondary;
+    color: $white;
+    z-index: 100;
+    white-space: nowrap;
+  }
+  &:hover {
+    .avatar-name {
+      display: block;
+    }
+  }
+}
+
+.avatar-label {
+  @extend .avatar;
+  width: auto;
+  padding: 0 5px;
+}
+
+.avatar-text {
+  color: $secondary;
+  font-size: 10px;
+  font-weight: $font-weight-bold;
+}

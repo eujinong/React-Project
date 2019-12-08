@@ -1,0 +1,58 @@
+.notification-container {
+  padding: 10px 18px;
+  border-radius: 3px;
+  border: 1px solid #DCD6D1;
+  position: relative;
+  margin-bottom: 20px;
+  .notification-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down('sm') {
+      flex-wrap: wrap;
+    }
+  }
+  .notification-message {
+    margin-bottom: 0;
+    padding-left: 32px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: -1px;
+    }
+  }
+  .notification-action {
+    margin: 10px 0;
+  }
+
+  &.notification-success {
+    background: #F3FCF9;
+    .notification-content {
+      .notification-message {
+        &:before {
+          background-image: url('../images/icons/check-circle-success.svg');
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  &.notification-warning {
+    background: #FFF7F0;
+    .notification-content {
+      .notification-message {
+        &:before {
+          background-image: url('../images/icons/close-circle-error.svg');
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

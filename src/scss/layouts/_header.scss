@@ -1,0 +1,26 @@
+.site-header {
+  font-weight: $font-weight-bold;
+  .navbar-brand {
+    padding-left: 20px;
+    margin-right: 60px;
+    img {
+      width: 140px;
+      height: 46px;
+    }
+  }
+  .profile-item {
+    display: flex;
+    align-items: center;
+    .content {
+      margin-left: 10px;
+      line-height: 1;
+      .title {
+        color: $navbar-dark-active-color;
+      }
+      .subtitle {
+        font-weight: $font-weight-medium;
+        color: $navbar-dark-color;
+      }
+    }
+  }
+}

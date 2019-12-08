@@ -1,0 +1,35 @@
+.alert {
+  box-shadow: 0 2px 7px 0 rgba(#656363, 0.13);
+  margin-bottom: 0;
+}
+.alert-secondary {
+  border-color: $gray-500;
+  color: $secondary;
+  background-color: $silver;
+}
+
+.alert-task {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down('sm') {
+    flex-direction: column; 
+  }
+  .content {
+    flex: 1;
+  }
+  .action {
+    display: flex;
+    align-items: center;
+    
+    @include media-breakpoint-down('sm') {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+  .post-editor-container {
+    button {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}

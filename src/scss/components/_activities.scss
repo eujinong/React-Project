@@ -1,0 +1,45 @@
+.activities {
+  .activity-item {
+    font-size: 13px;
+    font-weight: $font-weight-medium;
+    position: relative;
+    padding-left: 27px;
+    
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background-color: $gray-300;
+    }
+    &:first-of-type {
+      &::after {
+        background-color: #8A93A9;
+      }
+    }
+    .when {
+      margin-bottom: 4px;
+    }
+    .content {  
+      color: $secondary;
+    }
+    
+    &:not(:last-of-type) {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 0;
+        width: 1px;
+        bottom: 0;
+        background-color: #8A93A9;
+      }
+      .content {
+        padding-bottom: 32px;
+      }
+    }
+  }
+}

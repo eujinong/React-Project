@@ -1,0 +1,43 @@
+
+$notification-bar-z-index: 2000;
+
+$container-gutter-width: 22px;
+
+$font-maps: (
+  'TTNorms':                            ( family: 'TTNorms',       file: 'TTNorms-Regular',               weight: 400, style: normal ),
+  'TTNormsMedium':                      ( family: 'TTNorms',       file: 'TTNorms-Medium',                weight: 500, style: normal ),
+  'TTNormsBold':                        ( family: 'TTNorms',       file: 'TTNorms-Bold',                  weight: 700, style: normal ),
+);
+
+$font-weight-maps: (
+  'normal': $font-weight-normal,
+  'medium': $font-weight-medium,
+  'bold': $font-weight-bold
+);
+
+$icon-size-maps: (
+  'xl': 48px,
+  'lg': 36px,
+  'md': 30px,
+  'base': 24px,
+  'msm': 20px,
+  'sm': 16px,
+  'xs': 12px
+);
+
+$heading-maps: (
+  'h1': ('font-size': $h1-font-size, 'letter-spacing': -1.6px),
+  'h2': ('font-size': $h2-font-size, 'letter-spacing': -0.7px),
+  'h3': ('font-size': $h3-font-size, 'letter-spacing': -0.58px, 'line-height': 1.08),
+  'h4': ('font-size': $h4-font-size, 'letter-spacing': -0.5px, 'line-height': 1.5),
+  'h5': ('font-size': $h5-font-size, 'letter-spacing': 0, 'line-height': 1.5),
+  'h6': ('font-size': $h6-font-size, 'letter-spacing': 0, 'line-height': 1.7)
+);
+
+$font-size-maps: (
+  'lg': ('font-size': $font-size-base * 1.25, 'line-height': 1.5),
+  'md': ('font-size': $font-size-base * 1.125),
+  'base': ('font-size': $font-size-base),
+  'sm': ('font-size': $font-size-base * 0.875),
+  'xs': ('font-size': $font-size-base * 0.75)
+);

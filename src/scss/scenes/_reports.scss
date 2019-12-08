@@ -1,0 +1,50 @@
+.reports-page {
+  width: 100%;
+  position: relative;
+  .actionbar {
+    margin-bottom: 24px;
+    border-bottom: 1px solid $gray-500;
+    background-color: $gray-200;
+    padding-left: 20px;
+  }
+  .download-cube {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: $secondary;
+    max-width: 440px;
+    @include media-breakpoint-down('sm') {
+      padding: 10px;
+      top: 50px;
+      right: 0;
+      bottom: initial;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .animation {
+      padding: 20px;
+      div {
+        padding: 20px;
+        background: $gray-200;
+        border-radius: 90px;
+      }
+    }
+    .cube-content {
+      padding-right: 10px;
+      .title {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+      }
+      @include media-breakpoint-down('sm') {
+        display: none;
+      }
+    }
+  }
+}

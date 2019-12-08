@@ -1,0 +1,89 @@
+.profile-page {
+  width: 100%;
+  margin-top: 70px;
+  .profile-settings {
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    @include media-breakpoint-down('md') {
+      flex-wrap: wrap;
+      min-height: auto;
+    }
+    .profile-tabs {
+      width: 360px;
+      border-right: 1px solid $gray-300;
+      @include media-breakpoint-down('md') {
+        width: 100%;
+        border-right: none;
+        margin-bottom: 40px;
+      }
+      .profile-tab {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        padding: 20px;
+        position: relative;
+        font-weight: $font-weight-bold;
+        cursor: pointer;
+        &.active {
+          border-right: none;
+          @include media-breakpoint-down('md') {
+            border-right: 1px solid $gray-300;
+          }
+          &:before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 100%;
+            left: -5px;
+            top: 0;
+            background: $steel;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+          }
+          &:after {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 100%;
+            right: -3px;
+            top: 0;
+            background: $white;
+            @include media-breakpoint-down('md') {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+    .settings {
+      background: $white;
+      padding: 0 30px;
+      width: 100%;
+      border: 1px solid $gray-300;
+      border-left: none;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      @include media-breakpoint-down('md') {
+        border-left: 1px solid $gray-300;
+      }
+      .setting-panel {
+        .setting-header {
+          padding: 17px 0;
+          border-bottom: 1px solid $gray-300;
+          .title {
+            width: 100%;
+            font-size: 20px;
+            font-weight: $font-weight-bold;
+            margin-bottom: 0;
+          }
+        }
+        .setting-body {
+          padding: 30px 0;
+          .btn {
+            min-width: 120px;
+          }
+        }
+      }
+    }
+  }
+}

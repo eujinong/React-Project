@@ -1,0 +1,101 @@
+.communications {
+  .communication-heading {
+    .title {
+      font-size: $h6-font-size;
+      font-weight: $font-weight-bold;
+      margin-bottom: 5px;
+    }
+  }
+  .communication-panel {
+    margin-bottom: 10px;
+  }
+}
+
+.communication-panel {
+  font-weight: $font-weight-medium;
+  border: 0;
+  .card-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F1F2F5;
+    border-bottom: 0;
+  }
+  .card-body {
+    padding: 0;
+  }
+  .panel-top {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .panel-title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+  }
+  .panel-action {
+    display: flex;
+    .action-item {
+      &:not(:last-of-type) {
+        margin-right: 8px;
+      }
+      .arrow {
+        transition: transform .2s ease;
+        &.opened {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .panel-header {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EFF0F2;
+    .title {
+      font-weight: $font-weight-bold;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+  .panel-body {
+    padding: 20px;
+    .fields {
+      margin-bottom: 20px;
+      .field-item {
+        display: flex;
+        label {
+          width: 150px;
+        }
+        span {
+          flex: 1;
+        }
+      }
+    }
+    .members {
+      .member {
+        display: flex;
+        font-weight: $font-weight-medium;
+        .title {
+          &::before {
+            margin-left: 3px;
+            margin-right: 3px;
+            content: "-"
+          }
+          color: $gray-800;
+        }
+      }
+    }
+  }
+  .panel-footer {
+    padding: 16px 20px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 20px;
+      right: 20px;
+      top: 0;
+      border-bottom: 2px solid #EFF0F2;
+    }
+  }
+}

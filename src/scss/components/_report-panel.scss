@@ -1,0 +1,43 @@
+.report-panel {
+  padding: 40px;
+  background: $white;
+  @include media-breakpoint-down('md') {
+    padding: 20px;
+  }
+  border-radius: 4px;
+  border: 1px solid $gray-400;
+  margin-bottom: 20px;
+  .panel-header {
+    border-bottom: 1px solid $gray-400;
+  }
+  .actions {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down('md') {
+      flex-wrap: wrap;
+    }
+    .report-form {
+      display: flex;
+      .form-item {
+        width: 250px;
+        margin-right: 40px;
+        &:last-child {
+          width: auto;
+        }
+      }
+      @include media-breakpoint-down('md') {
+        flex-wrap: wrap;
+        .form-item {
+          margin-bottom: 20px;
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+    .btn {
+      font-weight: $font-weight-medium;
+    }
+  }
+}

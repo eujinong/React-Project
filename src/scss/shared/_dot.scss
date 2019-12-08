@@ -1,0 +1,20 @@
+.dot {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: $danger;
+  }
+  @each $key, $color in $theme-colors {
+    &.dot-#{$key} {
+      &:after {
+        background-color: $color !important;
+      }
+    }
+  }
+}
