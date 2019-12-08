@@ -1,4 +1,4 @@
-# wp4setup
+# setup
 
 ## Install
 `npm i`
